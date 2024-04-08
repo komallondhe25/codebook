@@ -9,7 +9,6 @@ export const ProductDetail = () => {
   const { cartList, addToCart, removeFromCart } = useCart();
   const [inCart, setInCart] = useState(false);
   const [product, setProduct] = useState({});
-  const { id } = useParams();
   useEffect(() => {
     async function fetchProduct() {
       try {

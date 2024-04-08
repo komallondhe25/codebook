@@ -11,18 +11,11 @@ export const ProductCard = ({ product }) => {
     name,
     overview,
     poster,
-    image_local,
     price,
     rating,
     best_seller,
   } = product;
 
-  function handleClick(product) {
-    addToCart(product);
-  }
-  function handleRemoveFromCart(product) {
-    removeFromCart(product);
-  }
   useEffect(() => {
     if (cartList.find((item) => item.id === product.id)) {
       setInCart(true);
@@ -40,7 +33,7 @@ export const ProductCard = ({ product }) => {
         )}
         <img
           className="rounded-t-lg w-full h-64"
-          src={image_local}
+          src={poster}
           alt={name}
         />
       </Link>

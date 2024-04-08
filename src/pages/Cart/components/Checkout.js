@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../../context";
-import { createOrder, getUser, getUserOrders } from "../../../services";
+import { createOrder, getUser} from "../../../services";
 import { toast } from "react-toastify";
 
 export const Checkout = ({setCheckout}) => {
@@ -10,7 +10,6 @@ export const Checkout = ({setCheckout}) => {
 
   const navigate = useNavigate();
 
-  const token = JSON.parse(sessionStorage.getItem("token"));
 
   useEffect(() => {
     async function fetchData(){
